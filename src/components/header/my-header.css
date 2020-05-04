@@ -1,0 +1,25 @@
+
+.my-header {
+    display: flex;
+    align-items: center;
+    padding: 5px 16px;
+    color: rgb(3, 75, 3);
+    font-family: monaco;
+    
+    background-color: rgba(115, 165, 40, 0.918);
+    /* border-radius: 8px; */
+  }
+/* 
+  .menu-element{
+    flex-grow: 1;
+    font-size: 2em;
+    text-align: right;
+  } */
+
+.header-name{
+    /* color: rgb(3, 75, 3); */
+    color: white;
+    /* font: courier; */
+    margin-left: 80px;
+    text-decoration: none !important;
+}
