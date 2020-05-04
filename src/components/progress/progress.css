@@ -1,0 +1,52 @@
+
+  .progress{
+      background-color:  rgba(178, 202, 233, 0.589);
+    position:absolute;
+    /* top:0; */
+    right:0;
+    border-radius: 8px;
+
+    
+  }
+
+  .progress-bar {
+    position: relative;
+    height: 20px;
+    width: 350px;
+    border-radius: 50px;
+    border: 1px solid #333;
+  }
+  
+  .filler {
+    background: rgb(113, 166, 235);
+    height: 100%;
+    border-radius: inherit;
+    transition: width .2s ease-in;
+  }
+  
+  button {
+    margin-right: 10px;
+    padding: 7px 12px;
+    font-size: 14px;
+    /* icon */
+    background: rgb(113, 166, 235);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    outline: 0;
+    border-radius: 8px;
+
+  }
+  
+  #vids {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #vids a:first-of-type {
+    margin-bottom: 5px;
+  }
+
+  
