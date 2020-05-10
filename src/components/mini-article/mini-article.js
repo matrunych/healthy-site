@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { Skeleton } from '@material-ui/lab';
 import Typography from '@material-ui/core/Typography';
+import {Link} from 'react-router-dom';
+
 
 const data = [
   {
@@ -49,19 +51,21 @@ function Media(props) {
 
   return (
     <Grid container >
-      {(loading ? Array.from(new Array(5)) : data).map((item, index) => (
-        <Box key={index} width={315} marginLeft={5} marginRight={5} my={5}>
+      {(loading ? Array.from(new Array(2)) : data).map((item, index) => (
+        <Box key={index} width={325} marginLeft={5} marginRight={5} my={5}>
           {item ? (
-            <img style={{ width: 315, height: 236 }} alt={item.title} src={item.src} />
+            <img style={{ width: 325, height: 236 }} alt={item.title} src={item.src} />
           ) : (
-            <Skeleton variant="rect" width={315} height={236} />
+            <Skeleton variant="rect" width={325} height={236} />
           )
           }
 
           {item ? (
             <Box pr={2}>
               <Typography gutterBottom variant="body2">
-                <a href={item.link}>{item.title}</a>
+              <Link to={item.link}>{item.title}</Link>
+
+                {/* <a href={item.link}>{item.title}</a> */}
               </Typography>
               <Typography display="block" variant="caption" color="textSecondary">
                 {item.subtitle}
@@ -71,7 +75,7 @@ function Media(props) {
           ) : (
             <Box pt={0.5}>
               <Skeleton />
-              <Skeleton width="60%" />
+              <Skeleton width="80%" />
             </Box>
           )}
         </Box>
@@ -80,9 +84,6 @@ function Media(props) {
   );
 }
 
-// Media.propTypes = {
-//   loading: PropTypes.bool,
-// };
 
 export default function Articles() {
   return (

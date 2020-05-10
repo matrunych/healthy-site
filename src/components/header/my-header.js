@@ -1,18 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import './my-header.css';
 
 export default class MyHeader extends React.Component {
     render() {
         return (
            <div className='my-header'>
-              <h1 ><a className='header-name' href="/">Your Health</a></h1>
+              <h1 >
+                 <Link className='header-name' to='/'>Your Health</Link>
+               </h1>
            </div>
         );
      }
  }
-
-
-
-// <a className="menu-item" href="/habits">
-//           Healthy habits
-//         </a>

@@ -1,18 +1,19 @@
 
   .progress{
-      background-color:  rgba(178, 202, 233, 0.589);
-    position:absolute;
-    /* top:0; */
-    right:0;
+    /* background-color:  rgba(178, 202, 233, 0.589); */
+    position: relative;
+    float:right;
     border-radius: 8px;
-
+    width: 350px;
+    margin-left: 5px;
+    margin-right: 5px;
     
   }
 
   .progress-bar {
     position: relative;
     height: 20px;
-    width: 350px;
+    width: 300px;
     border-radius: 50px;
     border: 1px solid #333;
   }
@@ -21,6 +22,7 @@
     background: rgb(113, 166, 235);
     height: 100%;
     border-radius: inherit;
+    
     transition: width .2s ease-in;
   }
   
