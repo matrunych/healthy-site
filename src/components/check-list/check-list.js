@@ -44,10 +44,6 @@ export default class AppContainer extends React.Component {
       <div className='check-list'>
         <h2>{this.props.title}</h2>
         <h4>{items}</h4>
-        
-                {/* <hr />
-        <small>&copy; {new Date().getFullYear()}</small> */}
-
       </div>
     );
   }
