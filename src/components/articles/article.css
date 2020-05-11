@@ -1,0 +1,37 @@
+.article{
+	margin-right: auto;
+	margin-left: auto;
+	left: 100px;
+	width: 50%;
+	margin: 0 auto;
+
+}
+
+.center-image{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.right-image{
+	float: right; 
+	margin: 0px 15px 15px 0px;	
+	display: inline-block;
+	width: 250px;
+
+
+}
+
+h2{
+	font-family: monaco;
+	color: rgb(3, 75, 3);
+	font-size: larger;
+
+}
+
+h1{
+	font-family: monaco;
+	color: rgb(3, 75, 3);
+	font-size: x-large;
+
+}
