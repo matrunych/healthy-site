@@ -1,8 +1,11 @@
 .check-list{
     /* background-color: rgba(115, 165, 40, 0.712); */
-    position:absolute;
+    position: absolute;
     top:280px;
-    right: 50px;
+    right: 20px;
+    float:right;
+    width: 330px;
+    
   
 
 }
