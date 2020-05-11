@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from '@material-ui/core';
+import {Button, TextField } from '@material-ui/core';
 
 import './habits.css'
 
@@ -62,8 +62,7 @@ export default class HabitsList extends React.Component {
     for (var i = 0; i < this.state.habitslist.length; i++) { 
         allTheThings.push(<Item message={this.state.habitslist[i].title} />);
       }
-    // let allTheThings = [<Item message={this.props.mes1} />, <Item message={this.props.mes2} />, 
-    //   <Item message={this.state.mes1} />, <Item message={this.props.mes4} />]
+
     let items = allTheThings.map(thing => thing);
 
     return (
@@ -73,6 +72,8 @@ export default class HabitsList extends React.Component {
         <h2>Habits List</h2>
         
         <h4>{items}</h4>
+        <TextField id="standard-secondary" label="Enter new habit" color="secondary" />
+
         <Button className='button1' variant="contained" color="primary">
           Add habit
         </Button>
