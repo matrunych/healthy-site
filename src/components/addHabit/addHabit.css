@@ -1,0 +1,25 @@
+.prg-bar{
+    margin-top: 200px;
+    right: 200 px;
+    width: 25%;
+}
+
+.input-field {
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid  rgba(115, 165, 40, 0.918);
+}
+
+  .button{
+    background-color: rgba(115, 165, 40, 0.918);
+    border: none;
+    color: white;
+    height: 35px;
+    width: 50px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
