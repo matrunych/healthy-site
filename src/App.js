@@ -20,37 +20,29 @@ import Article3 from './components/articles/article3'
 import Article4 from './components/articles/article4'
 
 
+import AddHabit from './components/addHabit';
 
-
-// const items = [
-//   { name: 'home', label: 'Home' },
-//   { name: 'billing', label: 'Billing' },
-//   { name: 'settings', label: 'Settings' },
-// ]
 
 
 function App() {
   return (
-    
-    <BrowserRouter>
-    <MyHeader></MyHeader>
-    <SideBar></SideBar>
+      <BrowserRouter>
+        <MyHeader></MyHeader>
+        <SideBar></SideBar>
 
-    <Switch>
-    <Route path='/habits' component={HabitList } />
-    <Route path='/8-tips-for-health-eating' component={Article1}></Route>
-    <Route path='/7-healthy-habits-healthy-life' component={Article2}></Route>
-    <Route path='/creating-healthy-habits' component={Article3}></Route>
-    <Route path='/eat-healthy' component={Article4}></Route>
+        <Switch>
+          <Route path='/habits' component={HabitList } />
+          <Route path='/8-tips-for-health-eating' component={Article1}></Route>
+          <Route path='/7-healthy-habits-healthy-life' component={Article2}></Route>
+          <Route path='/creating-healthy-habits' component={Article3}></Route>
+          <Route path='/eat-healthy' component={Article4}></Route>
 
-    <Route path='/'  component={MainPage}/>
+          <Route path='/'  component={MainPage}/>
 
+        </Switch>
+      </BrowserRouter>
 
-    </Switch>
-
-    </BrowserRouter>
-
-);
+  );
 }
 
 export default App;

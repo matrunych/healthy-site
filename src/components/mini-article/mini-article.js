@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { Skeleton } from '@material-ui/lab';
@@ -38,7 +37,6 @@ const data = [
     'https://cdn1.sph.harvard.edu/wp-content/uploads/sites/30/2012/09/HEPJan2015.jpg',
     title: 'Healthy Eating: The Beginner’s Guide on How to Eat Healthy and Stick to It',
     subtitle: 'Food',
-
     link: '/eat-healthy'
   },
   
@@ -64,8 +62,6 @@ function Media(props) {
             <Box pr={2}>
               <Typography gutterBottom variant="body2">
               <Link to={item.link}>{item.title}</Link>
-
-                {/* <a href={item.link}>{item.title}</a> */}
               </Typography>
               <Typography display="block" variant="caption" color="textSecondary">
                 {item.subtitle}
