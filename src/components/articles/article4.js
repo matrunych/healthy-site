@@ -3,7 +3,7 @@ import Foot from '../footer';
 
 import './article.css'
 
-export default class Article2 extends React.Component {
+export default class Article4 extends React.Component {
     render(){
         return(
             <div>

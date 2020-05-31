@@ -11,7 +11,7 @@ export default class Article2 extends React.Component {
 
                     <h1>7 Healthy Habits for a Healthy Life</h1>
                     <article id="post-19484" class="post-19484 post type-post status-publish format-
-           standard has-post-thumbnail category-featured category-health-fitness">
+                                 standard has-post-thumbnail category-featured category-health-fitness">
                         <div class="entry-content">
                             <img class="center-image" src="https://d1v1n2d34vm51j.cloudfront.net/wp-content/uploads/Well-7-Healthy-Habits-4p-3p-2p-B_web1.jpg"></img>
                             <p>It’s a truism that most of us want to live long, happy, successful, and healthy lives. Unfortunatel

@@ -2,15 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {Provider} from 'react-redux'
 
+import rootReducer from './reducers/root'
 
 import MyHeader from './components/header';
 import SideBar from './components/sidebar';
-import HabitProgress from './components/progress'
-import Foot from './components/footer';
-
-import Articles from './components/mini-article';
-import AppContainer  from './components/check-list/check-list'
 import MainPage from './components/main-page';
 
 import HabitList from './components/habits';
@@ -20,12 +17,15 @@ import Article3 from './components/articles/article3'
 import Article4 from './components/articles/article4'
 
 
-import AddHabit from './components/addHabit';
+import configStore from './store';
 
 
+
+const store = configStore(rootReducer)
 
 function App() {
   return (
+    <Provider store={store}>
       <BrowserRouter>
         <MyHeader></MyHeader>
         <SideBar></SideBar>
@@ -41,6 +41,7 @@ function App() {
 
         </Switch>
       </BrowserRouter>
+      </Provider>
 
   );
 }

@@ -85,7 +85,6 @@ export default function Articles() {
   return (
     <Box overflow="hidden">
       <Media  data/>
-
     </Box>
   );
 }
