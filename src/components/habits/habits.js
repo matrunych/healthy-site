@@ -1,43 +1,14 @@
 import React from 'react';
-import {Button, TextField } from '@material-ui/core';
 
 import './habits.css'
 import AddHabit from '../addHabit';
+import { connect } from 'react-redux';
+import { fetchHabitslist } from '../../actions';
+
+import Item from '../habit'
 
 
-class Item extends React.Component {
-    constructor (props){
-        super ();
-
-        this.state = {
-            checked: false
-        };
-
-        this.handleClick = this.handleClick.bind(this);
-    }
-    handleClick (e){
-        this.setState({
-            checked: !this.state.checked
-        });
-
-    }
-
-    render (){
-
-        let text = this.state.checked ? <strike>{this.props.message}</strike> : this.props.message;
-        return (
-            <div className="row">
-                <div className="col-md-12">
-                    <input type="checkbox" onClick={this.handleClick} />&nbsp;{text}
-                    <hr />
-                </div>
-            </div>
-        );
-    }
-}
-
-
-export default class HabitsList extends React.Component {
+class HabitsList extends React.Component {
 
     state = {
         habitslist: [],
@@ -53,7 +24,6 @@ export default class HabitsList extends React.Component {
             })
         })
     }
-
 
     updateItem(id, itemAttributes) {
         var index = this.state.habitslist.length;
@@ -104,20 +74,23 @@ export default class HabitsList extends React.Component {
 
 
     render (){
-        let allTheThings = [];
-        for (var i = 0; i < this.state.habitslist.length; i++) {
-            allTheThings.push(<Item message={this.state.habitslist[i].title} />);
-        }
-        let items = allTheThings.map(thing => thing);
-
-        return (
-
+        let items = this.state.habitslist.map((habit, i) => (<Item key={i} message={habit.title} />))
+        return(
             <div className='habits-list'>
                 <h2>Habits List</h2>
                 <h4>{items}</h4>
-                <AddHabit  onAdd={(e) => this.addNewHabit(e)} ></AddHabit>
+                <AddHabit onAdd={(e) => this.addNewHabit(e)} ></AddHabit>
             </div>
         );
     }
 }
+
+const mapStateProps = () => ({
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    fetchHabitslist: () => dispatch(fetchHabitslist()),
+});
+
+export default connect(mapStateProps, mapDispatchToProps)(HabitsList)
 

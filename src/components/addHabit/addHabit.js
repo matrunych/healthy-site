@@ -9,8 +9,7 @@ export default class AddHabit extends React.Component{
         this.state = {
           title: ''
         }
-    
-        this.todoRef = React.createRef();
+        this.habRef = React.createRef();
       }
     
       handleSubmit(e) {
@@ -21,7 +20,7 @@ export default class AddHabit extends React.Component{
         this.props.onAdd(this.state.title);
     
         this.setState({ title: '' });
-        this.todoRef.current.focus();
+        this.habRef.current.focus();
       }
     
       handleChange(e) {
@@ -35,7 +34,7 @@ export default class AddHabit extends React.Component{
         return(
             <div>
                 <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <input className="input-field" ref={this.todoRef} placeholder="Enter new habit" value={this.state.title} onChange={(e) => this.handleChange(e)}></input>
+                    <input className="input-field" ref={this.habRef} placeholder="Enter new habit" value={this.state.title} onChange={(e) => this.handleChange(e)}></input>
                     <input className="button" type="submit" value="+"></input>
                 </form>
             </div>
